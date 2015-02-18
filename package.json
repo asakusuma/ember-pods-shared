@@ -1,7 +1,7 @@
 {
   "name": "ember-pods-shared",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Adds a root-level shared directory for an ember app using pods",
   "author": "Asa Kusuma",
   "main": "index.js",
   "repository": {
@@ -39,7 +39,10 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "pods",
+    "shared",
+    "ember"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
