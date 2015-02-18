@@ -1,6 +1,38 @@
-# Ember-pods-shared
+# ember-pods-shared
 
-This README outlines the details of collaborating on this Ember addon.
+This addon exposes a resolver that enabled access to a root-level `shared` directory when using pods.
+
+For instance, if you have a model at `app/shared/models/my-model`, you can reference it like so
+
+```javascript
+import MyModel from 'shared/models/my-model';
+```
+
+To use, simply set the resolver as your app resolver *and* test resolver like so
+
+```javascript
+// ...
+// app.js
+import Resolver from 'ember-pods-shared';
+
+var App = Ember.Application.extend({
+  // ...
+  Resolver: Resolver
+});
+
+// tests/helpers/resolver.js
+import Resolver from 'ember-pods-shared';
+import config from '../../config/environment';
+
+var resolver = Resolver.create();
+
+resolver.namespace = {
+  modulePrefix: config.modulePrefix,
+  podModulePrefix: config.podModulePrefix
+};
+
+export default resolver;
+```
 
 ## Installation
 
