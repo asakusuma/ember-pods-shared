@@ -1,6 +1,6 @@
 {
   "name": "ember-pods-shared",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds a root-level shared directory for an ember app using pods",
   "author": "Asa Kusuma",
   "main": "index.js",
