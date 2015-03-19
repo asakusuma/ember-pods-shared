@@ -4,7 +4,6 @@ import Resolver from 'ember/resolver';
 
 export default Resolver.extend({
   customPattern: function(parsedName) {
-    console.log(parsedName);
     var name = parsedName.fullNameWithoutType;
     var segs = name.split('/');
     var postfix = '';
